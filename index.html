@@ -1,127 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Interactive Fiction</title>
-    <link href="main.css" rel="stylesheet" />
+	<meta charset="utf-8" />
+	<title>Interactive Fiction</title>
+	<link href="main.css" rel="stylesheet" />
 </head>
-
-<body><h2>
-<div id="player_inventory">
-  <span class="item-container"><h3>Inventory:</h3>
-    <div class="inventory-box empty">A History of Computers</div>
-    <div class="inventory-box empty"></div>
-    <div class="inventory-box empty"></div>
-  </span>
-</div>
-<div id="steps-taken">
-  <h3>Steps Taken:</h3>
-  <ul id='steps'>
-  </ul>
-</div>
-
+<body>
 <div id="impress">
-  
-    <div id="slide2" class="step slide">
-      <div class="slide-text"><br>
-        <p>There's a time machine over there. Flip the switch?</p>
-        <p><a href='#slide3'>FLIP</a> it.</p>
-        <p><a href='#slide1'>Wait, do time machines exist?</a></p>
-        <div class="event-text"></div>
-     </div>
-     <div class="menu item-container"><div class="inventory-box"></div></div>
-    </div>
-      <div id="slide1" class="step slide" data-x="-1500">
-      <div class="slide-text">
-        <p>Apparently they do.</p>
-        <p>Accept that for a while.</p>
-        <p>Now let's learn some history.</p>
-        <div class="event-text"></div>
-      </div>
-      <div class="menu"><p><a href='#slide2'>End</a></p></div>
-      </div>
-    <div id="slide3" class="step slide" data-x="1500">
-      <div class="slide-text">
-        <p>Okay, let's go back to 1936.</p>
-        <p>Konrad Zuse released the Z1 Computer, the first freely programmable computer.</p>
-        <div class="event-text"></div>
-      </div>
-      <div class="menu"><div class="inventory-box"><img src="Z1.jpg" alt="z1" class="item" id="z1" height=100 width==110></div></div>
-    </div>
-    
-<div id="slide4" class="step slide" data-x="-1500">
-<div class="slide-text"><br>
-        <p>1951: UNIVAC
-        When the Univac was invented, it consisted of magnetic tape with a speed of 12,800 characters per second.
-        It faced competition from IBM's computing equipment too.</p>
-        <center><img src="univac.jpg" class="item" id="univac"></center>
-        <div class="event-text"></div>
-     </div></div>
-    <div id="slide5" class="step slide" data-x="-1500">
-<div class="slide-text"><br>
-        <p>1954. FORTRAN
-        It was the first high level programming lamguage and was commercialy released in 1957.
-        Fortran is still used today for programming scientififc and mathematical applications.</p>
-        <center><img src="fortran.jpeg" class="item" id="fortran"></center>
-        
-        <div class="event-text"></div>
-     </div></div>
-     <div id="slide6" class="step slide" data-x="-1500">
-<div class="slide-text"><br>
-        <p>1958. Integrated Circuits
-        1961 saw the first commercially available integrated circuits.
-
-        "What we didn't realise then was that integrated circuits would reduce the cost of electric function by a factor of a million to one, nothing had ever done that for anything tomorrow." -Jack Kilby </p>
-        <center><img src="ic.jpg" class="item" id="ic"></center>
-       
-        <div class="event-text"></div>
-     </div></div>
-     <div id="slide7" class="step slide" data-x="-1500">
-<div class="slide-text"><br>
-        <p>1969. ARPAnet was invented. This was the precursor to the Internet we know today and was developped by the american army.
-        Under this, email and the abilty to send messages was created.</p>
-       <center><img src="arpanet.jpg" class="item" id="arpanet"></center>
-        <div class="event-text"></div>
-     </div></div>
-     <div id="slide8" class="step slide" data-x="-1500">
-<div class="slide-text"><br>
-        <p>1981. MS-DOS. IBM introduced a 'revolution in a box'. Bill Gates wrote this brilliant new Disk Operating System which did indeed revolutionize computing.
-      </p>
-      <center><img src="dos.png" class="item" id="dos"></center>
-        
-        <div class="event-text"></div>
-     </div></div>
-     <div id="slide9" class="step slide" data-x="-1500">
-<div class="slide-text"><br>
-        <p>1984. Could we expect anything less from a company that was now being run by the former president of Pepsi-Cola? The company under Steve Jobs's vision revealed a revolutionary product that is still one of its kind: the Mac.</p>
-        <center><img src="mac.jpg" class="item" id="mac"></center>
-
-        <div class="event-text"></div>
-     </div></div>
-    <center> <div id="slide10" class="step slide" data-x="-1500">
-<div class="slide-text"><br>
-        <p>This was a brief history of some things that made an impact in the world of computing.</p>
-        <div class="event-text"></div>
-     </div></div>
-      <div id="slide11" class="step slide" data-x="-1500">
-<div class="slide-text"><br>
-        <p>Thanks for interacting. Bye!</p>
-        <center><img src="download.jpg" class="item" id="bye"></center>
-        <div class="event-text"></div>
-     </div></div>
-</center>
-
-
+	<div id="1" class="step slide">
+		<q> You're on the first slide. The down and right keys will take you to the next page. The left and up arrow keys will take you back. </q>
+	</div>
+	<div id="2" class="step slide">
+		<q>You can also use the spacebar instead of the right or down key to go to the next page. </q>
+	</div>
+	<div id="3" class="step slide">
+		<q>Now you're on the last page. Right will take you back to the beginning. </q>
+	</div>
 </div>
-
 <script src="impress.js"></script>
-<script>impress().init();</script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script>!window.jQuery && document.write('<script src="jquery-1.4.1.min.js"><\/script>')</script>
-<script src="jquery.raptorize.1.0.js"></script>
+<script>impress() .init();</script>
 
-<script src="game.js"></script>
-<script src="dragDrop.js"></script>
-</h2>
 </body>
 </html>
